@@ -1,15 +1,21 @@
 import React from "react";
+import { Link, Route, Switch } from 'react-router-dom'
+
 
 const Home = () => {
   return (
     <>
-      <h1>Lambda Eats</h1>
-      <p>Your favorite Pizza</p>
+      <div>
+          <h1>Lambda Eats</h1>
+      </div>
+      <div>
+          <p>Your favorite Pizza</p>
+      </div>
 
       <div>
-
-      <h3>Order your Pizza now</h3>
-      
+      <Link to='/pizza'> <h3>
+          Order your Pizza now
+      </h3> </Link>
       </div>
     </>
   );
