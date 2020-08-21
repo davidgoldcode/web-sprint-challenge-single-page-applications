@@ -75,7 +75,7 @@ const App = () => {
   const postNewOrder = newOrder => {
     axios.post('https://reqres.in/api/orders', newOrder)
       .then(res => {
-        debugger
+        console.log(res.data)
         setOrders([...orders, res.data])
       })
       .catch(err => {
@@ -87,6 +87,11 @@ const App = () => {
   }
 
   const submit = () => {
+    debugger
+    let arr = Object.keys(formValues.toppings);
+    console.log(formValues.toppings);
+    let newarr = arr.map( item => formValues.toppings[item])
+
     const newOrder = {
       name: formValues.name.trim(),
       size: formValues.size,
@@ -100,29 +105,25 @@ const App = () => {
   
   return (
     <>
-      
       <div>
-          <div>
-            <Link to='/'> Home </Link>
-          </div>
-          <div>
-            <Link to='/pizza' className='orderPizza' id='navOrder'> Order your Pizza now </Link>
-          </div>
-
-          <Route exact path='/'>
-            <Home/>
-          </Route>
-
-
-          <Route path='/pizza'>
-            <Form 
-            values={formValues}
-            inputChange={inputChange}
-            checkboxChange={checkboxChange}
-            submit={submit}
-            />
-          </Route>
+        <Link to='/'> Home </Link>
       </div>
+      <div>
+        <Link to='/pizza' className='orderPizza' id='navOrder'> Order your Pizza now </Link>
+      </div>
+
+      <Route exact path='/'>
+        <Home/>
+      </Route>
+
+      <Route path='/pizza'>
+        <Form 
+          values={formValues}
+          inputChange={inputChange}
+          checkboxChange={checkboxChange}
+          submit={submit}
+        />
+      </Route>
     </>
   );
 };
