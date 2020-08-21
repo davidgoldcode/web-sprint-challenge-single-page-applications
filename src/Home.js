@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form"
 
-const App = () => {
+const Home = () => {
   return (
     <>
       <h1>Lambda Eats</h1>
@@ -15,5 +15,5 @@ const App = () => {
     </>
   );
 };
-export default App;
+export default Home;
 
