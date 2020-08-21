@@ -106,7 +106,7 @@ const App = () => {
             <Link to='/'> Home </Link>
           </div>
           <div>
-            <Link to='/pizza'> Order your Pizza now </Link>
+            <Link to='/pizza' className='orderPizza' id='navOrder'> Order your Pizza now </Link>
           </div>
 
           <Route exact path='/'>

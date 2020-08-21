@@ -13,9 +13,11 @@ const Home = () => {
       </div>
 
       <div>
-      <Link to='/pizza'> <h3>
-          Order your Pizza now
-      </h3> </Link>
+      <Link to='/pizza' className='orderPizza'> 
+        <h3>
+            Order your Pizza now
+        </h3> 
+      </Link>
       </div>
     </>
   );
